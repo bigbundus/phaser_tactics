@@ -16,6 +16,8 @@ export default class MainGameScene extends Phaser.Scene
 
     create()
     {
+        this.scene.run('main-ui')
+
         const map = this.make.tilemap({ key: 'level-1'})
         const groundTileset = map.addTilesetImage('TX Tileset Grass', 'ground-tiles')
         map.createLayer('Ground', groundTileset)
